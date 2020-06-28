@@ -1,7 +1,6 @@
 import { Context } from 'koa'
 
 import partyRepo from '../pkg/firestore/party'
-import party from '../pkg/firestore/party'
 
 async function list(ctx: Context) {
   ctx.body = await partyRepo.list()
@@ -27,17 +26,17 @@ async function update(ctx: Context) {
 }
 
 async function remove(ctx: Context) {
-  if (await party.remove(ctx.params.id)) ctx.status = 200
+  if (await partyRepo.remove(ctx.params.id)) ctx.status = 200
 }
 
 async function join(ctx: Context) {
   const { partyId, userId } = ctx.request.body
-  if (await party.join(partyId, userId)) ctx.status = 200
+  if (await partyRepo.join(partyId, userId)) ctx.status = 200
 }
 
 async function exit(ctx: Context) {
   const { partyId, userId } = ctx.request.body
-  if (await party.exit(partyId, userId)) ctx.status = 200
+  if (await partyRepo.exit(partyId, userId)) ctx.status = 200
 }
 
 async function listPartyMembers(ctx: Context) {
