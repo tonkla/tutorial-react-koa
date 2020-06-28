@@ -1,0 +1,56 @@
+{
+  "name": "front-end",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Surakarn Samkaew <tonkla@gmail.com>",
+  "scripts": {
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run build:css && GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "watch:css": "postcss src/styles/tailwind.css -o src/styles/main.css",
+    "build:css": "postcss src/styles/tailwind.css -o src/styles/main.css --env production"
+  },
+  "dependencies": {
+    "antd": "^4.3.5",
+    "autoprefixer": "^9.8.4",
+    "axios": "^0.19.2",
+    "cssnano": "^4.1.10",
+    "dayjs": "^1.8.28",
+    "easy-peasy": "^3.3.1",
+    "firebase": "^7.15.5",
+    "google-auth-library": "^6.0.2",
+    "nanoid": "^3.1.10",
+    "postcss-cli": "^7.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.10.1",
+    "@testing-library/react": "^10.3.0",
+    "@testing-library/user-event": "^12.0.2",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
+    "typescript": "^3.9.5"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

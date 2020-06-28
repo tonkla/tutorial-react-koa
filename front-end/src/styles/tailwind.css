@@ -1,0 +1,14 @@
+@tailwind base;
+
+html {
+  font-family: Roboto, Sarabun, sans-serif;
+  font-size: 16px;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+@tailwind components;
+@tailwind utilities;
