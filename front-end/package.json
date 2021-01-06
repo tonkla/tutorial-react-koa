@@ -13,7 +13,7 @@
   "dependencies": {
     "antd": "^4.3.5",
     "autoprefixer": "^9.8.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "cssnano": "^4.1.10",
     "dayjs": "^1.8.28",
     "easy-peasy": "^3.3.1",
